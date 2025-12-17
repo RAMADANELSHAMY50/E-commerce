@@ -1,0 +1,178 @@
+
+.products-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  margin-top: 5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.products-container .head{
+  margin: 1rem;
+}
+
+.products-container p{
+  color: var(--main_color);
+  margin-bottom: 4rem;
+}
+
+
+.slider-track {
+  gap: 2rem;
+  width: max-content; 
+  animation: scrollRight 100s linear infinite; 
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.product-card {
+  background: #fff;
+    gap: 2rem;
+  width: 200px;
+  border-radius: 14px;
+  overflow: hidden;
+  
+  box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.20);
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 170px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  
+  
+ 
+}
+
+
+.offer-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff4444;
+  color: white;
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.product-name {
+  margin: 12px 0 5px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.new-price {
+  color: #1d4ed8;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 15px;
+}
+
+.btn-add {
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background: var(--color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-add img{
+    width: 1.5rem;
+    
+}
+
+
+
+.btn-add:hover {
+  background: #333;
+}
+
+@media (max-width: 600px) {
+ 
+.products-container {
+ margin-top: 4rem;
+}
+
+  .slider-track {
+    gap: 1rem;
+    
+  }
+
+  .product-card {
+    width: 170px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .image-wrapper {
+    height: 150px;
+  }
+
+  .product-name {
+    font-size: 14px;
+  }
+
+  .price-box {
+    gap: 6px;
+  }
+
+  .new-price {
+    font-size: 15px;
+  }
+
+  .old-price {
+    font-size: 13px;
+  }
+
+  .btn-add {
+    font-size: 13px;
+    padding: 7px;
+    gap: 6px;
+  }
+
+  .btn-add img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}

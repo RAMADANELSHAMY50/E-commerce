@@ -1,0 +1,49 @@
+main{
+    margin: 2rem;
+    padding: 1rem;
+    background: white;
+    margin-top: 6rem;
+   border-radius: 10px;
+    overflow: hidden;
+}
+
+
+main .left h1{
+    text-transform: capitalize;
+    margin-top: 5rem;
+}
+
+main .left p{
+    color: var(--main_color);
+    margin-top: 10px;
+}
+
+
+main .left button{
+    margin: 2rem;
+    padding: 0.8rem;
+    background-color: var(--color);
+    color: white;
+    border-radius: 0.5rem;
+    transition: 1s;
+}
+
+main .left button:hover{
+    background-color: rgb(215, 103, 62);
+    cursor: pointer;
+}
+
+main .right img{
+   width: max-content; 
+    height: 20rem;
+    border-radius: 10px;
+   
+}
+
+
+@media (max-width: 700px) {
+    main .right img{
+        margin-top: 5rem;
+}
+}
+

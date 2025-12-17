@@ -1,0 +1,96 @@
+
+.hero{
+  background-color: var(--bg_color);
+}
+
+.hero .hero-left{
+    margin-top: 9rem;
+    margin-left: 6rem;
+}
+
+.hero .hero-left p{
+    text-transform: uppercase;
+}
+
+
+.hero .hero-left h1{
+    text-transform: capitalize;
+    margin-top: 1rem;
+}
+
+
+.hero .hero-left h1 span{
+    color:var(--color);
+}
+
+
+.hero .hero-left h4{
+margin-top: 1rem;
+color: var(--main_color);
+
+}
+
+.dual-button {
+    margin: 2rem;
+  align-items: center;
+  width: fit-content;
+  
+  height: 3.5rem;
+  
+ background-color: #fff;
+ border-radius: 0.5rem;
+ border: none;
+}
+
+.left-box {
+ padding: 0.5rem;
+}
+
+.left-box span {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  color: #333;
+}
+
+.left-box p {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+.right-btn {
+  background: #ff6b3d;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius:0.5rem ;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.right-btn:hover {
+  background: #ff7f4f;
+}
+
+
+
+.hero .hero-right{
+    margin-top: -0.6rem;
+    margin-right: 4rem;
+    height: 50%;
+}
+
+@media (max-width: 700px) {
+.hero .hero-left{
+    margin-top: 9rem;
+    margin-left: 4rem;
+}
+ 
+  .hero .hero-right{
+    display: none;
+}
+}
