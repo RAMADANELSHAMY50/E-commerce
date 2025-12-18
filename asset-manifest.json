@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/RAMADANELSHAMY50/E-commerce/static/css/main.3e11a57a.css",
-    "main.js": "/RAMADANELSHAMY50/E-commerce/static/js/main.a2665208.js",
-    "static/js/453.f2efac6c.chunk.js": "/RAMADANELSHAMY50/E-commerce/static/js/453.f2efac6c.chunk.js",
-    "static/media/banner1.png": "/RAMADANELSHAMY50/E-commerce/static/media/banner1.ae2efe085e8796b03989.png",
-    "static/media/bg.png": "/RAMADANELSHAMY50/E-commerce/static/media/bg.23d822397cb77125ae3e.png",
-    "static/media/logo.png": "/RAMADANELSHAMY50/E-commerce/static/media/logo.a87788a36791a843ad5b.png",
-    "index.html": "/RAMADANELSHAMY50/E-commerce/index.html",
-    "static/media/basket-add.svg": "/RAMADANELSHAMY50/E-commerce/static/media/basket-add.fd243258f6af784a9f38339312b1824b.svg",
-    "static/media/user.svg": "/RAMADANELSHAMY50/E-commerce/static/media/user.f987337c3f2e8d19d777552a447d37bc.svg",
-    "static/media/search.svg": "/RAMADANELSHAMY50/E-commerce/static/media/search.d0f45a9d1faa1322d2e9353e7c93e749.svg",
-    "main.3e11a57a.css.map": "/RAMADANELSHAMY50/E-commerce/static/css/main.3e11a57a.css.map",
-    "main.a2665208.js.map": "/RAMADANELSHAMY50/E-commerce/static/js/main.a2665208.js.map",
-    "453.f2efac6c.chunk.js.map": "/RAMADANELSHAMY50/E-commerce/static/js/453.f2efac6c.chunk.js.map"
+    "main.css": "./static/css/main.3e11a57a.css",
+    "main.js": "./static/js/main.7afbdaa6.js",
+    "static/js/453.f2efac6c.chunk.js": "./static/js/453.f2efac6c.chunk.js",
+    "static/media/banner1.png": "./static/media/banner1.ae2efe085e8796b03989.png",
+    "static/media/bg.png": "./static/media/bg.23d822397cb77125ae3e.png",
+    "static/media/logo.png": "./static/media/logo.a87788a36791a843ad5b.png",
+    "static/media/basket-add.svg": "./static/media/basket-add.fd243258f6af784a9f38339312b1824b.svg",
+    "index.html": "./index.html",
+    "static/media/user.svg": "./static/media/user.f987337c3f2e8d19d777552a447d37bc.svg",
+    "static/media/search.svg": "./static/media/search.d0f45a9d1faa1322d2e9353e7c93e749.svg",
+    "main.3e11a57a.css.map": "./static/css/main.3e11a57a.css.map",
+    "main.7afbdaa6.js.map": "./static/js/main.7afbdaa6.js.map",
+    "453.f2efac6c.chunk.js.map": "./static/js/453.f2efac6c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3e11a57a.css",
-    "static/js/main.a2665208.js"
+    "static/js/main.7afbdaa6.js"
   ]
 }
