@@ -2,7 +2,6 @@
   "name": "ecommerce-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -24,6 +23,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://github.com/RAMADANELSHAMY50/E-commerce",
   "eslintConfig": {
     "extends": [
       "react-app",
