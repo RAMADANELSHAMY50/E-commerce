@@ -47,7 +47,7 @@ function App() {
               <Hero setShowDiscount={setShowDiscount} />
               <Product addToCart={addToCart} />
               <Check setShowDiscount={setShowDiscount} />
-              <All_product
+              <Allproduct
                 showDiscount={showDiscount}
                 setShowDiscount={setShowDiscount}
                 searchTerm={searchTerm}
@@ -60,7 +60,7 @@ function App() {
         <Route
           path="/products"
           element={
-            <All_product
+            <Allproduct
               showDiscount={showDiscount}
               setShowDiscount={setShowDiscount}
               searchTerm={searchTerm}
