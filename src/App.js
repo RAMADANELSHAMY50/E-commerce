@@ -4,7 +4,7 @@ import Header from "./components/header/Header.jsx";
 import Hero from "./components/hero/Hero.jsx";
 import Product from "./components/product/Product.jsx";
 import Check from "./components/check-offers/Check.jsx";
-import All_product from "./components/all_products/All_product.jsx";
+import Allproduct from "./components/all_products/Allproduct.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import CartPage from "./components/cart/CartPage.jsx";
 import Login from "./components/login/Login.jsx";

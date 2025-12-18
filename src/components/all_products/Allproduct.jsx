@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import "./All_product.css";
+import "./Allproduct.css";
 import basket from "../../assets/basket-add.svg";
 import { dummyProducts } from "../product/Product-data";
 
-function All_product({ showDiscount, setShowDiscount, addToCart }) {
+function Allproduct({ showDiscount, setShowDiscount, addToCart }) {
   const [showAll, setShowAll] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -92,4 +92,4 @@ function All_product({ showDiscount, setShowDiscount, addToCart }) {
   );
 }
 
-export default All_product;
+export default Allproduct;
