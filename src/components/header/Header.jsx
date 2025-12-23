@@ -12,6 +12,8 @@ function Header({ setSearchTerm, cartItems, user }) {
   const [showSearchInput, setShowSearchInput] = useState(false);
   const [showLogout, setShowLogout] = useState(false); 
   const navigate = useNavigate();
+  const [showMenu, setShowMenu] = useState(false);
+
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -43,79 +45,95 @@ function Header({ setSearchTerm, cartItems, user }) {
   return (
     <div className="container">
       <div className="navbar flex">
-        <div className="icon flex">
-          <img src={logo} alt="" />
-          <h2>shop</h2>
-        </div>
 
-        <div className="links">
-          <ul className="flex">
-            <li><a href="#home">home</a></li>
-            <li><a href="#collect">collection</a></li>
-            <li><a href="#prod">products</a></li>
-          </ul>
-        </div>
+  {/* Logo + Name */}
+  <div className="icon flex">
+    <img src={logo} alt="" />
+    <h2>shop</h2>
+  </div>
 
-        <div className="search_login flex">
+  {/* Search (دايمًا ظاهر) */}
+  <div className="search-area">
+    <button
+      className="search-toggle"
+      onClick={() => setShowSearchInput(!showSearchInput)}
+    >
+      <img src={searchIcon} alt="search" />
+    </button>
 
-          <button
-            className="search-toggle"
-            onClick={() => setShowSearchInput(!showSearchInput)}
-          >
+    {showSearchInput && (
+      <div className="search-wrapper">
+        <form onSubmit={handleSearch} className="search-form flex">
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            autoFocus
+          />
+          <button type="submit">
             <img src={searchIcon} alt="search" />
           </button>
-
-          {showSearchInput && (
-            <div className="search-wrapper">
-              <form onSubmit={handleSearch} className="search-form flex">
-                <input
-                  type="text"
-                  placeholder="Search products..."
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  autoFocus
-                />
-                <button type="submit">
-                  <img src={searchIcon} alt="search" />
-                </button>
-              </form>
-            </div>
-          )}
-
-          <div className="cart-icon">
-            <img
-              src={basket_add}
-              alt="cart"
-              onClick={() => navigate("/cart")}
-            />
-            {cartItems.length > 0 && (
-              <span className="cart-count">{cartItems.length}</span>
-            )}
-          </div>
-
           
-          {user ? (
-            <div className="user-dropdown">
-              <button 
-                className="user-initials" 
-                onClick={() => setShowLogout(!showLogout)}
-              >
-                {getInitials(user.displayName)}
-              </button>
-              {showLogout && (
-                <button className="logout-btn" onClick={handleLogout}>
-                  Logout
-                </button>
-              )}
-            </div>
-          ) : (
-            <button onClick={() => navigate("/login")}>
-              <img src={userIcon} alt="" /> <span>Login</span>
+        </form>
+      </div>
+    )}
+  </div>
+
+  {/* Menu Button */}
+  <button className="menu-toggle" onClick={() => setShowMenu(!showMenu)}>
+    ☰
+  </button>
+
+  {/* Mobile Menu */}
+  <div className={`mobile-menu ${showMenu ? "active" : ""}`}>
+
+    <div className="links">
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#collect">collection</a></li>
+        <li><a href="#prod">products</a></li>
+      </ul>
+    </div>
+
+    <div className="menu-actions">
+
+      <div className="cart-icon">
+        <img
+          src={basket_add}
+          alt="cart"
+          onClick={() => navigate("/cart")}
+        />
+        {cartItems.length > 0 && (
+          <span className="cart-count">{cartItems.length}</span>
+        )}
+      </div>
+
+      {user ? (
+        <div className="user-dropdown">
+          <button
+            className="user-initials"
+            onClick={() => setShowLogout(!showLogout)}
+          >
+            {getInitials(user.displayName)}
+          </button>
+          {showLogout && (
+            <button className="logout-btn" onClick={handleLogout}>
+              Logout
             </button>
           )}
-
         </div>
-      </div>
+      ) : (
+        <button onClick={() => navigate("/login")}>
+          <img src={userIcon} alt="" /> <span>Login</span>
+        </button>
+      )}
+
+    </div>
+  </div>
+
+</div>
+
     </div>
   );
 }

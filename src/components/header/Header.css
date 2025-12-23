@@ -1,185 +1,229 @@
-/* Reset & Box-sizing */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+/* =========================
+   Reset
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-body{
-    background-color: var(--bg_color);
+body {
+  background-color: var(--bg_color);
+  font-family: sans-serif;
 }
 
-.container .navbar{
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.8rem 1.5rem;
+/* =========================
+   Navbar
+========================= */
+.container .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.8rem 1.5rem;
+  position: relative;
 }
 
-
-.container .navbar .icon{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+/* =========================
+   Logo
+========================= */
+.container .navbar .icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.container .navbar .icon img{
-    width: 40px;
-    height: 40px;
+.container .navbar .icon img {
+  width: 40px;
+  height: 40px;
 }
 
-
-.container .navbar .links a{
-    margin: 1rem;
-    color: var(--color_heading);
-    transition: 0.3s;
-    text-transform: capitalize;
+.container .navbar .icon h2 {
+  font-size: 20px;
+  color: var(--color_heading);
 }
 
-.container .navbar .links a:hover{
-    cursor: pointer;
-    color: var(--color);
+/* =========================
+   Search (always visible)
+========================= */
+.search-area {
+  position: relative;
 }
 
-/* Search & Login */
-.container .navbar .search_login{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    position: relative; 
+.search-toggle {
+  background: var(--color);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.container .navbar .search_login img{
-    width: 20px;
+.search-toggle img {
+  width: 18px;
 }
 
-.container .navbar .search_login button{
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-    border-radius: 10rem;
-    color: white;
-    gap: 3px;
-    background-color: var(--color);
-    cursor: pointer;
-}
-
-/* Search Wrapper (dropdown) */
+/* Search dropdown */
 .search-wrapper {
-    position: absolute;
-    top: 40px; 
-    right: 0;
-    width: 280px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    z-index: 100;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 280px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  z-index: 300;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Search Form */
 .search-form {
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-}
-.search_login .cart-icon img:hover{
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 6px;
 }
 
 .search-form input {
-    flex: 1;
-    padding: 6px;
-    border: none;
-    outline: none;
-    border-radius: 6px 0 0 6px;
-    font-size: 14px;
-    background-color: #f9f9f9;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 6px;
+  font-size: 14px;
 }
 
 .search-form button {
-    background: #eee;
-    border: none;
-    padding: 6px 10px;
-    cursor: pointer;
-    border-radius: 0 6px 6px 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .search-form button img {
-    width: 18px;
-    height: 18px;
+  width: 18px;
 }
 
-/* Search Results Dropdown */
-.search-results {
-    max-height: 250px;
-    overflow-y: auto;
-    border-top: 1px solid #ddd;
+/* =========================
+   Menu Toggle
+========================= */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.search-item {
-    padding: 8px 12px;
-    cursor: pointer;
-    transition:  0.2s;
-}
-
-.search-item:hover {
-    background-color: #f0f0f0;
-}
-.cart-item {
+/* =========================
+   Mobile Menu (Desktop)
+========================= */
+.mobile-menu {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 5px;
-  border-bottom: 1px solid #eee;
+  gap: 1.5rem;
 }
 
-.cart-item-img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.cart-item-info {
+/* Links */
+.links ul {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
 }
 
-.cart-item-name {
-  font-size: 14px;
-  font-weight: 500;
+.links a {
+  color: var(--color_heading);
+  text-transform: capitalize;
+  transition: 0.3s;
 }
 
-.cart-item-price {
-  font-size: 13px;
-  color: #555;
+.links a:hover {
+  color: var(--color);
 }
 
+/* =========================
+   Menu Actions
+========================= */
+.menu-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
+/* Cart */
+.cart-icon {
+  position: relative;
+}
 
-/* Responsive for Mobile */
+.cart-icon img {
+  width: 22px;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* User */
+.user-initials {
+  background: var(--color);
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.logout-btn {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background: #eee;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   Responsive (Mobile)
+========================= */
 @media (max-width: 700px) {
-    .container .navbar{
-        gap: 0.5rem;
-        width: 95%;
-        justify-content: space-between;
-    }
-    .container .navbar .links a{
-        margin:4px;
-    }
 
+  .menu-toggle {
+    display: block;
+  }
 
-    .container .navbar .icon{
-    margin-left: -1rem;
-    gap: 0.5rem;
-}
-    
-    .search-wrapper {
-        right: 5px;
-        width: 90%;
-        top: 50px;
-    }
+  .mobile-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    z-index: 200;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .links ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .menu-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .search-wrapper {
+    width: 95%;
+    right: 2.5%;
+  }
 }
