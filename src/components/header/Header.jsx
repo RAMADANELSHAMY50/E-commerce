@@ -124,8 +124,8 @@ function Header({ setSearchTerm, cartItems, user }) {
           )}
         </div>
       ) : (
-        <button onClick={() => navigate("/login")}>
-          <img src={userIcon} alt="" /> <span>Login</span>
+        <button style={{backgroundColor:'#E5DCDC',display:'flex',alignItems:'center',cursor:'pointer'}} onClick={() => navigate("/login")}>
+          <img style={{width:'26px'}} src={userIcon} alt="" /> <span style={{color:'--main_color',textAlign:'center'}}>Login</span>
         </button>
       )}
 
